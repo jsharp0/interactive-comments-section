@@ -23,7 +23,7 @@ import { CommentService } from '../services/comment.service';
       <div class="full-width" *ngIf="currentUser | async as currentUser">
         <div class="comment-heading">
           <div class="metadata">
-            <img [src]="'.' + comment.user.image.png" />
+            <img [src]="comment.user.image.png" />
             <span class="username">{{ comment.user.username }}</span>
             <span
               class="badge"

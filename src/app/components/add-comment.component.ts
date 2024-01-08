@@ -7,13 +7,13 @@ import { Comments } from '../interfaces/comment.interface';
   selector: 'app-add-comment',
   template: `
     <div class="add-comment" *ngIf="currentUser | async as currentUser">
-      <img class="desktop" [src]="'.' + currentUser.image.png" />
+      <img class="desktop" [src]="currentUser.image.png" />
       <textarea
         placeholder="Add a comment..."
         [(ngModel)]="commentContent"
       ></textarea>
       <div class="add-comment-bottom-bar">
-        <img class="mobile" [src]="'.' + currentUser.image.png" />
+        <img class="mobile" [src]="currentUser.image.png" />
         <button
           class="primary"
           (click)="
